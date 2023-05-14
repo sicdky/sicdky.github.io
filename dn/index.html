@@ -1,0 +1,30 @@
+<html>
+<head>
+  <title>dino</title>
+  <style>
+    html,body{
+        background: #7FFF00;
+        color: white;
+        font-family: sans-serif;
+        text-align: center;
+    }
+    h1{
+        margin-top: 64px;
+    }
+    </style>
+</head>
+<body>
+  <h1>dino:<a href="chrome://dino/">chrome://dino/</a></h1>
+  <h1>無敵</h1>
+  <pre>首先，右键点击Google Chrome，选择“检查”/“审查元素”（或者也可以按F12键）；
+右方就会出现写程序的面板，选择Resources</pre>
+<pre>Runner.instance_.gameOver=function(){};</pre>
+<pre>在Resources写代码处，复制一个这样的代码，然后关闭检查，重新开一局游戏即可体验。以下也一樣</pre>
+<h1>加分</h1>
+<pre>var hackScore=0;
+
+Object.defineProperty(Runner.instance_,"distanceRan",{get:function(){return hackScore},set:function(a){return hackScore=a+Math.floor(1E3*Math.random())},configurable:!0,enumerable:!0});</pre>
+<h1>speed</h1>
+<pre>Runner.instance_.setSpeed(速度)</pre>
+
+  <body>
