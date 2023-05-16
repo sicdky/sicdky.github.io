@@ -1,0 +1,49 @@
+<html>
+<head>
+  <title>驗證</title>
+  <style>
+    html,body{
+        background: #7FFF00;
+        color: white;
+        font-family: sans-serif;
+        text-align: center;
+    }
+    h1{
+        margin-top: 64px;
+    }
+    </style>
+</head>
+<body>
+  <h1>where do you want to go</h1>
+  <body>
+    <form action="#" method="post">
+      <label for="input-text">驗證</label>
+      <input type="text" id="input-text" name="input-text" required>
+      <button type="submit">提交</button>
+    </form>
+
+    <script>
+      const form = document.querySelector('form');
+      form.addEventListener('submit', (event) => {
+        event.preventDefault();
+
+        const inputText = document.getElementById('input-text').value;
+
+        switch (inputText) {
+          case 'dn':
+            window.location.href = '/dn';
+            break;
+          case '天堂':
+            window.location.href = 'https://cdn-news.org/ColumnistArticle.aspx?EntityID=ColumnistArticle&PK=000000000060f13d13769dcbd14e374a80badd78ec47bb85';
+            break;
+          case '':
+            window.location.href = '';
+            break;
+          default:
+            window.location.href = '';
+            break;
+        }
+      });
+    </script>
+  </body>
+</html>
